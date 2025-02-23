@@ -27,7 +27,6 @@ define([
                 // ... other attributes to be passed to the block
             };
 
-            console.log('data.WidgetBlockPageBuilder', {config, data, attributes});
             dataObject.set(data, config.html_variable, this.buildBlockDirective(attributes));
             return data;
         }
