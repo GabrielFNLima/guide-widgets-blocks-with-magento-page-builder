@@ -3,8 +3,9 @@
 namespace Devgfnl\WidgetBlockPageBuilder\Block;
 
 use Magento\Framework\View\Element\Template;
+use Magento\Widget\Block\BlockInterface;
 
-class Info extends Template
+class Info extends Template implements BlockInterface
 {
     /**
      * Get my field from Page Builder
