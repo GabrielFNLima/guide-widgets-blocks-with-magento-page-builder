@@ -96,7 +96,6 @@ define([
 
             $.ajax(url, requestConfig)
                 .done((response) => {
-                    console.log('response', response);
                     if (typeof response.data !== 'object' || !response.data.content) {
                         this.placeholderText(this.messages.NO_RESULTS);
 
