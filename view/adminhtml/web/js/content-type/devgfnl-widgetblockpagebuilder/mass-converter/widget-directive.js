@@ -20,7 +20,7 @@ define([
 
         toDom(data, config) {
             const attributes = {
-                type: 'Devgfnl\\WidgetBlockPageBuilder\\Block\\Info',
+                class: 'Devgfnl\\WidgetBlockPageBuilder\\Block\\Info',
                 template: 'Devgfnl_WidgetBlockPageBuilder::info.phtml',
                 type_name: 'Widget with PageBuilder',
                 my_field: data.my_field
@@ -28,8 +28,12 @@ define([
             };
 
             console.log('data.WidgetBlockPageBuilder', {config, data, attributes});
-            dataObject.set(data, config.html_variable, this.buildDirective(attributes));
+            dataObject.set(data, config.html_variable, this.buildBlockDirective(attributes));
             return data;
+        }
+
+        buildBlockDirective(attributes) {
+            return '{{block ' + this.createAttributesString(attributes) + '}}';
         }
     }
 
