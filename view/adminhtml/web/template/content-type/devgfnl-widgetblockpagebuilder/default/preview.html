@@ -1,5 +1,5 @@
 <div class="pagebuilder-content-type" attr="data.main.attributes" ko-style="data.main.style" css="data.main.css"
-     event="{ mouseover: onMouseOver, mouseout: onMouseOut }" mouseoverBubble="false">
+     event="{ mouseover: onMouseOver, mouseout: onMouseOut }, mouseoverBubble: false">
     <div class="my-class"
          data-bind="liveEdit: { field: 'my_field', placeholder: $t('Your custom content type!') }"></div>
     <div if="displayPreview" class="rendered-content" html="widgetUnsanitizedHtml" afterRender="onAfterRender"></div>
